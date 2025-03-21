@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ['fullstackapp-9.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -192,9 +193,7 @@ CORS_ALLOW_HEADERS = [
     "accept",
     "x-csrf-token",
 ]
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",  # Prevent CSRF errors
-]
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 AUTHENTICATION_BACKENDS = [
