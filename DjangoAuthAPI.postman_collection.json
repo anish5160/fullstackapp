@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "382df6ed-5c36-4187-93b4-b3c9f52a28f7",
+		"name": "DjangoAuthAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Accept", "value": "application/json", "type": "default" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"sonam@example.com\", \"name\": \"Sonam\", \"password\": \"123456\", \"password2\": \"123456\", \"tc\": true }"
+				},
+				"url": { "raw": "http://127.0.0.1:8000/api/user/register" }
+			}
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Accept", "value": "application/json", "type": "default" }],
+				"body": { "mode": "raw", "raw": "{ \"email\": \"sonam@example.com\", \"password\": \"123456\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/user/login" }
+			}
+		},
+		{
+			"name": "User Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{ "key": "Accept", "value": "application/json", "type": "default" },
+					{ "key": "Authorization", "value": "Bearer <new_access_token>", "type": "default" }
+				],
+				"url": { "raw": "http://127.0.0.1:8000/api/user/profile" }
+			}
+		},
+		{
+			"name": "Change User Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{ "key": "Accept", "value": "application/json", "type": "default" },
+					{ "key": "Authorization", "value": "Bearer <new_access_token>", "type": "default" }
+				],
+				"body": { "mode": "raw", "raw": "{ \"password\": \"newpassword\", \"password2\": \"newpassword\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/user/changepassword" }
+			}
+		},
+		{
+			"name": "Send Password Reset Email",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Accept", "value": "application/json", "type": "default" }],
+				"body": { "mode": "raw", "raw": "{ \"email\": \"sonam@example.com\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/user/send-reset-password-email" }
+			}
+		},
+		{
+			"name": "Reset User Password",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Accept", "value": "application/json", "type": "default" }],
+				"body": { "mode": "raw", "raw": "{ \"password\": \"hello123\", \"password2\": \"hello123\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/user/reset-password/<uid>/<token>" }
+			}
+		},
+		{
+			"name": "Mark Attendance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{ "key": "Accept", "value": "application/json", "type": "default" },
+					{ "key": "Authorization", "value": "Bearer <new_access_token>", "type": "default" }
+				],
+				"body": { "mode": "raw", "raw": "{ \"subject\": \"physics\", \"attendance_status\": \"present\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/attendance/mark" }
+			}
+		},
+		{
+			"name": "Get Attendance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{ "key": "Accept", "value": "application/json", "type": "default" },
+					{ "key": "Authorization", "value": "Bearer <new_access_token>", "type": "default" }
+				],
+				"body": { "mode": "raw", "raw": "{ \"date\": \"2025-02-07\", \"status\": \"present\" }" },
+				"url": { "raw": "http://127.0.0.1:8000/api/attendance/get" }
+			}
+		}
+	]
+}
