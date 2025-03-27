@@ -154,8 +154,9 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "aneshdwibedi115@gmail.com"
-EMAIL_HOST_PASSWORD = "xmao fiui csnf gqmt"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 logging.basicConfig(level=logging.DEBUG)
@@ -181,8 +182,13 @@ SIMPLE_JWT = {
 PASSWORD_RESET_TIMEOUT=86400          
 
 CORS_ALLOWED_ORIGINS = [
+    "https://frontend-tau-teal-24.vercel.app",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://frontend-tau-teal-24.vercel.app",  # Trust frontend URL
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -195,7 +201,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+
 AUTHENTICATION_BACKENDS = [
     'account.backend.CustomUserBackend',
     'django.contrib.auth.backends.ModelBackend',
