@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["fullstackapp-13.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["fullstackapp-14.onrender.com", "localhost", "127.0.0.1"]
 
 
 
