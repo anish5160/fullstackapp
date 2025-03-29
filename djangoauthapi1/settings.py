@@ -188,7 +188,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-ossmk72d4-anish5160s-projects.vercel.app",
+    "https://https://frontend-ahqnn09g7-anish5160s-projects.vercel.app/",
     "https://fullstackapp-16.onrender.com",  # Backend URL
 ]
 
