@@ -31,9 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["fullstackapp-14.onrender.com", "localhost", "127.0.0.1"]
-
-
+ALLOWED_HOSTS = ["fullstackapp-15.onrender.com"]
 
 
 # Application definition
@@ -184,12 +182,23 @@ PASSWORD_RESET_TIMEOUT=86400
 
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "https://frontend-6x8go7ry1-anish5160s-projects.vercel.app",
+    "http://localhost:3000",  # For local testing
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://frontend-tau-teal-24.vercel.app",  # Trust frontend URL
+    "https://frontend-tau-teal-24.vercel.app",
+    "https://frontend-6x8go7ry1-anish5160s-projects.vercel.app",
+    "https://fullstackapp-15.onrender.com",  # Backend URL
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
