@@ -15,6 +15,8 @@ from datetime import timedelta
 import os
 import logging
 from dotenv import load_dotenv
+import dj_database_url
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -93,12 +95,14 @@ WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+load_dotenv()
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default="postgresql://postbase_454g_user:lmgjJRdh4gXDQ2OjbSs1eW7k1bXdIzCx@dpg-cvlcq6ffte5s73e4o4pg-a.oregon-postgres.render.com/postbase_454g", 
+        conn_max_age=600, 
+        ssl_require=True
+    )
 }
 
 # JWT Configuration
