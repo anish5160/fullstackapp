@@ -182,13 +182,13 @@ PASSWORD_RESET_TIMEOUT=86400
 
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-luxedj09k-anish5160s-projects.vercel.app",
+    "https://frontend-o0rp67m58-anish5160s-projects.vercel.app",
     "http://localhost:3000",  # For local testing
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-luxedj09k-anish5160s-projects.vercel.app",
+    "https://frontend-o0rp67m58-anish5160s-projects.vercel.app",
     "https://fullstackapp-15.onrender.com",  # Backend URL
 ]
 
