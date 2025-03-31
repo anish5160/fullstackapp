@@ -34,7 +34,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "fullstackapp-15.onrender.com",  # Your backend
     "frontend-tau-teal-24.vercel.app",
-    "frontend-o0rp67m58-anish5160s-projects.vercel.app",
+    "frontend-b9s7tar6u-anish5160s-projects.vercel.app",
     "127.0.0.1",  # Local testing
     "localhost",
 ]
@@ -189,13 +189,13 @@ PASSWORD_RESET_TIMEOUT=86400
 
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-o0rp67m58-anish5160s-projects.vercel.app",
+    "https://frontend-b9s7tar6u-anish5160s-projects.vercel.app",
     "http://localhost:3000",  # For local testing
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-o0rp67m58-anish5160s-projects.vercel.app",
+    "https://frontend-b9s7tar6u-anish5160s-projects.vercel.app",
     "https://fullstackapp-15.onrender.com",  # Backend URL
 ]
 
