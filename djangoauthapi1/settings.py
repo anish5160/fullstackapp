@@ -31,7 +31,14 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["fullstackapp-15.onrender.com"]
+ALLOWED_HOSTS = [
+    "fullstackapp-15.onrender.com",  # Your backend
+    "frontend-tau-teal-24.vercel.app",
+    "frontend-o0rp67m58-anish5160s-projects.vercel.app",
+    "127.0.0.1",  # Local testing
+    "localhost",
+]
+ALLOWED_HOSTS += [f"{sub}.vercel.app" for sub in ["frontend-tau-teal-24", "frontend-o0rp67m58-anish5160s-projects"]]
 
 
 # Application definition
@@ -209,6 +216,7 @@ CORS_ALLOW_HEADERS = [
     "content-type",
     "accept",
     "x-csrf-token",
+    "x-requested-with",
 ]
 
 
