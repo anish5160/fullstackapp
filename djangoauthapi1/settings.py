@@ -191,11 +191,12 @@ SIMPLE_JWT = {
 
 PASSWORD_RESET_TIMEOUT=86400          
 
-CORS_ALLOWED_ORIGINS = [
-    "https://frontend-tau-teal-24.vercel.app",
-    "https://frontend-b9s7tar6u-anish5160s-projects.vercel.app",
-    "http://localhost:3000",  # For local testing
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://frontend-tau-teal-24.vercel.app",
+#     "https://frontend-b9s7tar6u-anish5160s-projects.vercel.app",
+#     "http://localhost:3000",  # For local testing
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://frontend-tau-teal-24.vercel.app",
